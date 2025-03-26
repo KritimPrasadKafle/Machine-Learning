@@ -1,0 +1,7 @@
+print("Enter the length: ")
+length = int(input())
+print("Enter the breadth: ")
+breadth = int(input())
+area = 1/2*(length * breadth)
+print(area)
+# print(length)
