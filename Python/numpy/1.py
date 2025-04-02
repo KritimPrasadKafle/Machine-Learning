@@ -170,4 +170,4 @@ for x in np.nditer(s, op_flags=['readwrite']):
     x[...]=x*x
 
 print(s)
-
+print(x)
