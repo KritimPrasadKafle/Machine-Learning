@@ -8,6 +8,6 @@ def task_list(request):
   tasks = Task.objects.all()
   output = "<h1>To-Do List</h1><ul>"
   for task in tasks:
-    output += f"<li>{task.title} (Created: {task.created_at})</li>"
+    output += f"<li>{task.title} (Created At: {task.created_at})</li>"
   output += "</ul>"
   return HttpResponse(output)
