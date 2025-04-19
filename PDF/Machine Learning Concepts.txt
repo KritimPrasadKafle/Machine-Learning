@@ -1,0 +1,36 @@
+Step 1 : Load and Explore Data
+
+Why:
+
+Purpose: to understand its structure, types, and quality before modeling.
+
+ML concept: Exploratory Data Analysis(EDA) ensures your data is clean and usable. ML models fail if data has issues(e.g. missing values, wrong types).
+
+Relevance: Crypto data has trends(e.g., Bitcoin's 2021 spike), which you need to visualize to confirm it's suitable.
+
+What:
+
+pd.read_csv: Loads a CSV file into a Pandas DataFrame (table-like structure).
+
+df.head(): Shows the first 5 rows (e.g., Date, Open, Close).
+
+df.info(): Lists columns, data types (e.g., float64 for prices, object for Date), and non-null counts.
+
+df.describe(): Gives stats (mean, min, max) for numeric columns (e.g., Close mean ~$20,000).
+
+df.isnull().sum(): Counts missing values per column (e.g., Volume might have 10 missing).
+
+plt.plot: Plots Date vs. Close to see price trends (e.g., upward trend in 2021).
+
+What If:
+
+Skip Loading: No data, no project!
+
+Wrong Path: Get FileNotFoundError or unicodeescape (use r'path').
+
+Skip EDA: Miss critical issues (e.g., missing Close values crash the model).
+
+Don’t Visualize: Miss trends (e.g., crypto volatility) that inform feature engineering.
+
+Step 2: Feature Engineering
+
