@@ -32,3 +32,10 @@ b = [i for i  in a  if i > 4]
 
 #Or (filter is this case; map could also be more appropriate in other cases)
 b = filter(lambda x: x > 4, a)
+
+
+def is_stop_sign(sign):
+    return sign.color == 'red' and sign.sides == 8
+
+if is_stop_sign(sign):
+    stop()
