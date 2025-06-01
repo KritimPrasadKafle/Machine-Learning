@@ -23,5 +23,12 @@ print(filteration(ans))
 
 
 
-answer = list([lambda x:  for i in range(1,x) if x%2==0])
+answer = list([lambda x: i for i in range(1,x) if x%2==0])
 print(answer[1,2,3,4])
+
+
+a = [3, 4, 5]
+b = [i for i  in a  if i > 4]
+
+#Or (filter is this case; map could also be more appropriate in other cases)
+b = filter(lambda x: x > 4, a)
