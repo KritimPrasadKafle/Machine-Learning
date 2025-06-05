@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import User, Profile, Post, Group
+from .tasks import send_welcome_email  # import the task
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -11,6 +12,11 @@ class UserSerializer(serializers.ModelSerializer):
         if User.objects.exclude(id = user_id).filter(name=value).exists():
             raise serializers.ValidationError("A user with this name already exists.")
         return value
+    def create(self, validated_data):
+        user = super().create(validated_data)
+        send_welcome_email.delay("kritim10kafle@gmail.com", user.name)
+
+        return user
     
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
