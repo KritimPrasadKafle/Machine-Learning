@@ -8,6 +8,7 @@ from rest_framework.pagination import PageNumberPagination
 
 from channels.layers import get_channel_layer
 from asgiref.sync import async_to_sync
+from django.core.cache import cache
 # Create your views here.
 
 class UserAPI(APIView):
@@ -23,6 +24,7 @@ class UserAPI(APIView):
         print("Check",serializer)
         return paginator.get_paginated_response(serializer.data)
     def post(self, request):
+        
         serializer = UserSerializer(data = request.data)
         if serializer.is_valid():
 
@@ -88,16 +90,28 @@ class ProfileAPI(APIView):
         profile.delete()
         return Response({"message": "Profile deleted successfully"}, status=status.HTTP_204_NO_CONTENT)
 
-
+import time
 class UserWithProfile(APIView):
-    def get(self, request,  id): 
+    def get(self, request, id): 
+        start = time.time()
+        cache_key = f"user_with_profile_{id}"
+        cached_data = cache.get(cache_key)
+        print(cached_data)
+        if cached_data:
+            print("CACHE HIT")
+            print("Took:", time.time() - start)
+            return Response(cached_data, status=status.HTTP_200_OK)
         print("11") 
+        print("CACHE MISS")
+        print("fetching from DB")
         try:
             user = User.objects.get(id=id)
         except User.DoesNotExist:
             return Response({"error": "User not found"}, status=status.HTTP_404_NOT_FOUND)
 
         serializer = UserWithProfileSerializer(user)  
+        cache.set(cache_key, serializer.data, timeout=60*15)
+        print("Took:", time.time() - start)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
 
@@ -184,3 +198,9 @@ class TriggerNotification(APIView):
             }
         )
         return Response({"status": "notification sent"})
+
+from .tasks import simulate_slow_task   
+class TriggerTask(APIView):
+    def get(self, request):
+        simulate_slow_task.delay("Kritim")
+        return Response({"status": "Task has been triggered!"})
