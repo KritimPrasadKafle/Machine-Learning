@@ -9,6 +9,12 @@ def simulate_fast_task(name):
     return f"Hello, {name}"
 
 @shared_task
+def simulate_medium_task(name):
+    time.sleep(3)
+    print(f"Task done for {name}")
+    return f"Hello, {name}"
+
+@shared_task
 def simulate_slow_task(name):
     time.sleep(5)
     print(f"Task done for {name}")
