@@ -45,3 +45,10 @@ def e_sort(emp):
 s_employees = sorted(employees, key = e_sort, reverse=True)
 s_employees1 = sorted(employees, key=lambda e: e.age)
 print(s_employees1)
+
+
+def hello(x):
+    return x*x
+
+s = lambda x : x*x
+
