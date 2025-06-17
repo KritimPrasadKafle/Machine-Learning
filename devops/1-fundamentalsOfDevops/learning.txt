@@ -1,0 +1,25 @@
+What is Devops?
+Devops is a process of improving the application delivery.
+Basically It is more about:
+ -> Improving delivery
+ -> Automation
+ -> Quality
+ -> Continuous Monitory
+ -> Continuous Testing
+ 
+Why Devops?
+Developer is writing a code for his application. They develop example.com and would be used by customer.
+
+Developer -------example.com----> customer
+
+Before there used to be lot of developer and used to put all the codes in one single repo and some one like system administrator would look into the code and create the server and deployed in the server. And there would be a guy who would be tester, he will test the application. There used to be also Build and Release Engineer who will make the code to the production.
+
+System administration will create server.
+BRE(Build and release engineer) will deploy it into the server.
+Server admin used deliver our application from their personal laptop onto the production.
+
+Everything was manual and communication was so much poor.
+
+Devops improves the delivery.
+
+

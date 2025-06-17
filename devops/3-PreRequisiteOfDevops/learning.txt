@@ -1,0 +1,21 @@
+Roles in a company
+-> Business Analyst -> Gathers and documents customer requirements(BRD)
+-> Product Manager  -> Defines the vision, goals, and priorities
+-> Product Owner    -> Manages backing and converts the vision into the actionable stories.
+-> UI/UX Desinger   -> Designs technical system structure and frameworks.
+-> Software Architect -> Designs technical system structure and frameworks.
+-> Developers       -> Build the actual product(UI, APIs, databases).
+-> QE Engineers     -> Tests product and infrastructure security.
+-> DBA              -> Designs and manages the database.
+-> DevOps Engineers -> Builds CI/CD pipelines and manages environments.
+-> Release Manager (Optional) -> Plans and manages releases.
+-> SRE              -> Ensures uptime, performance, and reliability post-release.
+-> Technical Writers -> Creates documentation for user and documentation.
+
+	       BRD	
+                |
+Customer -> Business Analyst -> PM(Product Manager) -> PO(Product Owner) -> System Architect -> Development(Infra, K8s, Docker, Git) -> Devops((Infra, K8s, Docker, Git) will give this)
+		|
+	       BRD	
+	      
+

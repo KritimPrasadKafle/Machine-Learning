@@ -1,0 +1,26 @@
+Software Development Lifecycle(SDLC)
+-> Design
+-> Develop
+-> test
+SDLC is the pattern or a way followed by the companies to deliver a high quality of product.
+
+example.com
+We are building an application for example E-commerce and have a different phase:
+planning -> defining -> designing -> building -> testing -> deploying
+
+This is the circular process.
+
+Planning -> Requirements -> core members -> business analytics or senior members
+Defining -> defining requirements in the documentation (Software Requirement Specification)
+Designing -> HLD or LLD -> Senior will make a design.
+After these process devops will come more handy.
+Building -> Developing(once the senior comes up with the planning, defining and designing then building comes)
+Testing -> code would be taken and tested out. QE will test the server.
+Deployment -> Prod(if everything goes fine from the QE).
+
+Devops engineer fastens the process.
+
+Everything happens in a automated way.
+
+
+
