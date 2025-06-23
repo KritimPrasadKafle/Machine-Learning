@@ -1,0 +1,60 @@
+How to connect aws cli to our local cli?
+
+(base) kritim@kritim:~/Documents/machinelearning/Machine-Learning$ cd ..
+(base) kritim@kritim:~/Documents/machinelearning$ cd ..
+(base) kritim@kritim:~/Documents$ cd ..
+(base) kritim@kritim:~$ cd ..
+(base) kritim@kritim:/home$ ssh ubuntu@publicIPAddress
+The authenticity of host 'publicIPAddress (publicIPAddress)' can't be established.
+ED25519 key fingerprint is SHA256:aOiTb0Dr16yfPtYhEcUKOczhV0dL4hWLmlfAzzjSWUA.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'publicIPAddress' (ED25519) to the list of known hosts.
+ubuntu@publicIPAddress: Permission denied (publickey).
+(base) kritim@kritim:/home$ ssh -i /home/kritim/Downloads/test111.pem ubuntu@publicIPAddress
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0664 for '/home/kritim/Downloads/test111.pem' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/home/kritim/Downloads/test111.pem": bad permissions
+ubuntu@publicIPAddress: Permission denied (publickey).
+(base) kritim@kritim:/home$ chmod 600 /home/kritim/Downloads/test111.pem
+(base) kritim@kritim:/home$ ssh -i /home/kritim/Downloads/test111.pem ubuntu@publicIPAddress
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-1029-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Jun 23 17:41:45 UTC 2025
+
+  System load:  0.02              Processes:             108
+  Usage of /:   25.6% of 6.71GB   Users logged in:       1
+  Memory usage: 20%               IPv4 address for enX0: 172.31.6.93
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Mon Jun 23 17:34:55 2025 from 13.233.177.3
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-PrivateIPAddress:~$ ls
+kritim
+ubuntu@ip-PrivateIPAddress:~$ touch kritim2
+ubuntu@ip-PrivateIPAddress:~$ ls
+kritim  kritim2
+ubuntu@ip-PrivateIPAddress:~$ 
+
