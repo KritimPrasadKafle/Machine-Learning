@@ -1,0 +1,22 @@
+Virtual Machine
+AWS -> VM (EC2)
+As a devops engineer you should look for the efficiency. So we need to make a automation.
+
+AWS EC2 API
+
+Script can be written using the AWS CLI, AWS API(Boto3 of python), AWS CFT, Terraform, AWS CDK.
+
+These all scripts will directly interact with the AWS EC2 API.
+
+Virtual machine or EC2 is the infrastructure.
+
+Basically this is done if a person should have to make a 10 EC2 instance.
+
+If org is using AWS then it would be used for the long term then AWS CDK is good one.
+
+Hybrid cloud platform
+
+Terraform should be used if we are having a hybrid cloud platform.
+
+
+
