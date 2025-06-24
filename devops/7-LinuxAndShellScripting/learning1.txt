@@ -14,4 +14,9 @@ In every .sh file there would be shebang(#!/) in first line.
 
 bash/dash/sh/kash -> executable
 
+When you are writing shell scripting always write /bin/bash
+
+What is the difference between /bin/sh and /bin/bash?
+Previously both the concept were same because /bin/sh was redirecting using the linking concept to /bin/bash but now it is not same because some of the operating systems have decided to use Dash as default so your script might not execute if you are writing in bash scripting on a machine where dash is default.
+
 
