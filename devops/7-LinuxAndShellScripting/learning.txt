@@ -1,0 +1,107 @@
+Operating System basically acts as a bridge between your software and hardware.
+Whether it is linux, window, mac.
+
+Software -> Gaming, Jenkins, Java/python
+Hardware -> CPU, RAM, I/O
+
+User -> App ->  windows -> cpu(ram, i/o) -> dell
+
+Linux is so much popular when it comes to software development:
+1) Free 
+2) opensource
+3) secure(Don't need to even install antivirus too)
+4) Distributions(Ubuntu)
+5) Fast
+
+Operating system should be fast when user uses it.
+
+Architecture of Linux:
+
+---------------------------------------------
+System software | User processes | Compilers
+---------------------------------------------
+System libraries
+---------------------------------------------
+Kernel
+---------------------------------------------
+OS
+---------------------------------------------
+
+Kernel is heart of any operating system which does 4 things:
+1) Device Management
+2) Memory Management
+3) Process Management
+4) Handling System
+
+System libraries (libc is the system library(one of the example)).
+
+Operating system is useful for establishing a communication between your hardware and software whenever a user sends a request it has to go from your software to your operating system to your hardware finally the response is also received back in the same way.
+
+
+Fundamentals of Shell Scripting:
+
+Shell is a way to communicate with os.
+
+In linux we use shell to communicate with os.
+
+ls -> list of files and folder
+pwd -> in which directory are you in
+cd -> change directory
+cd .. -> one directory back
+ls -ltr -> provides you the list of directory which has the timing and other permission and all the things too.
+inside ls -ltr if it is starting with d that means it is a directory
+
+For example: drwxrwxr-x 3 ubuntu ubuntu 4096 Jun 24 17:38 hello
+
+If it is not staring with d that means it is a file.
+
+For example: -rw-rw-r-- 1 ubuntu ubuntu    0 Jun 24 17:41 hey
+
+touch -> to create a file
+vi -> to create the file as well write inside the file too.
+to write inside the file we have to enter i which is insert and to come back we have to click Esc and write :qa!
+
+Press Esc to ensure you're in command mode
+Type :w and press Enter to save (write)
+Type :q and press Enter to quit
+Or combine both: :wq and press Enter to save and quit
+
+
+mkdir -> to create a directory
+
+rm -> to remove a directory
+
+free -> memory of the server
+
+nproc -> number of cpu
+
+df -h -> disk size
+
+top -> cpu percentage, memory percentage (gives details about everything)
+
+rm - Basic remove
+
+Removes files only
+Cannot remove directories (even empty ones)
+Prompts for confirmation on write-protected files
+Example: rm file.txt
+
+
+
+rm -r - Recursive remove
+
+Removes directories and their contents recursively
+The -r flag means "recursive" - it goes into directories and removes everything inside
+Still prompts for confirmation on write-protected files
+Example: rm -r my_folder/
+
+
+rm -rf - Recursive force remove
+
+Removes directories and their contents recursively (-r)
+The -f flag means "force" - no prompts, no questions asked
+Won't prompt for write-protected files or ask for confirmation
+Most dangerous version - permanently deletes everything without warning
+Example: rm -rf my_folder/
+
+
