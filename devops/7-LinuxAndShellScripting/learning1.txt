@@ -1,0 +1,17 @@
+Automation is process of removing the manual activity.
+Something tedious and mostly -> solution is automation.
+
+Shell scripting is way to automate the thing in the process of work for any devops engineer.
+
+ls -> listing directories
+ls -ltr -> to get the file names and directories.
+man (command name) to get what all command it has.
+vi/vim -> to create the file and write inside it.
+touch -> used in automations
+shebang -> #!/bin/bash
+In every .sh file there would be shebang(#!/) in first line. 
+
+
+bash/dash/sh/kash -> executable
+
+
