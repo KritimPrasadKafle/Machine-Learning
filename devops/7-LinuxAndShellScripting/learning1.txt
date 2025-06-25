@@ -19,4 +19,102 @@ When you are writing shell scripting always write /bin/bash
 What is the difference between /bin/sh and /bin/bash?
 Previously both the concept were same because /bin/sh was redirecting using the linking concept to /bin/bash but now it is not same because some of the operating systems have decided to use Dash as default so your script might not execute if you are writing in bash scripting on a machine where dash is default.
 
+cat -> print the contents of the file.
+
+Linux terminal wants to know who can execute the file because linux has a great security.
+
+So granting permission is the answer.
+
+chmod -> grants permissions to a file
+
+ch -> change
+
+chmod -> which root(user), which group, you.
+
+If you want to give permission to everyone then you just need to write chmod 777 filename.
+
+When you run ./script.sh without a shebang, the system doesn't know which interpreter to use, so it falls back to:
+
+Current shell - Uses whatever shell you're currently in (bash, zsh, dash, etc.)
+Default behavior - Tries to execute it as shell commands directly
+
+In your case, the shell tried to execute I am working on linux as a command, treating I as a program name.
+What the shebang does:
+The shebang (#!) tells the system exactly which interpreter to use:
+
+#!/bin/bash - Use bash shell
+#!/bin/sh - Use system shell (usually dash on Ubuntu)
+#!/usr/bin/python3 - Use Python 3
+#!/usr/bin/env node - Use Node.js
+
+
+How the number is categorized?
+
+chmod 777 filename
+
+7 is a magic number.
+7 -> myself,
+7 -> group,
+7 -> everyone
+
+4 -> read ,
+2 -> write,
+1 -> execute
+
+chmod 444 means read
+
+
+User   Group    Everyone
+
+User  ->  Owner
+
+touch will just create the file whereas vim will create and open the file.
+
+The advantage of using touch is mostly used in automation.
+
+When we want to create 100s of file we cannot use vim command because it creates and opens too.
+
+cat -> read the content of the file.
+
+chmod -> grants permission
+
+man -> manual command to provide the details of that command.
+
+pwd -> current directory
+
+ls -ltr -> with timestamps
+
+mkdir -> to create a directory
+
+cd -> change directory
+
+
+Purpose of shell scripting in devops:
+1.Infra maintainance
+2.code management using git repository 
+3. configuration management (automation of cronjobs, switching to dir where scripts are present)
+
+
+John -> Devops guy in a company
+company -> 10000 vms linux
+
+He has to manage 10000 vms. He has to look for the node health.
+To see the health he will a shell script he will see it. shell machine logs into the system and it will say what has happened.
+
+
+Without doing any thing it will be running and gives a email notification saying this is having this issue.
+
+Shell Scripting is the must for the devops engineer.
+
+
+nproc -> cpu monitoring
+free -> ram monitoring
+top -> which process is taking how much time, amount of memory, memory usage.
+
+
+
+
+
+
+
 
