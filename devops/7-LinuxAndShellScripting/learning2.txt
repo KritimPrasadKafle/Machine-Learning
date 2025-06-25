@@ -1,0 +1,168 @@
+df -h -> for printing the disk space
+free -g -> for printing the memory
+nproc -> for resources
+
+
+set -x #debug mode
+
+#!/bin/bash
+#################
+# Author: Kritim
+# Date: 01/12/2022
+#
+# This  script outputs the node health
+#
+# Version : v1
+##################
+#
+
+set -x 
+echo "Print the disk space"
+df -h
+
+echo "Print the memory"
+free -g
+
+echo "Print the CPU"
+nproc
+
+
+ubuntu@ip-privateaddress:~/testing$ ./nodeHealth.sh 
++ echo 'Print the disk space'
+Print the disk space
++ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       6.8G  2.3G  4.5G  35% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           192M  916K  191M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/xvda16     881M  148M  672M  18% /boot
+/dev/xvda15     105M  6.2M   99M   6% /boot/efi
+tmpfs            96M   12K   96M   1% /run/user/1000
++ echo 'Print the memory'
+Print the memory
++ free -g
+               total        used        free      shared  buff/cache   available
+Mem:               0           0           0           0           0           0
+Swap:              0           0           0
++ echo 'Print the CPU'
+Print the CPU
++ nproc
+1
+
+
+ps -ef 
+
+ps -> process 
+-ef -> provides details of the process
+
+This command is to see what all things is running in the virtual machine.
+
+My work is to find the process id also for specific process then :
+
+ps -ef | grep "amazon"
+
+ubuntu@ip-private address:~$ ps -ef | grep "amazon"
+root         518       1  0 Jun24 ?        00:00:02 /snap/amazon-ssm-agent/11320/amazon-ssm-agent
+ubuntu     13694   13554  0 17:59 pts/3    00:00:00 grep --color=auto amazon
+
+
+518, 13694 is the process id.
+
+| -> integration of two things. 
+
+For example : ps -ef | grep "amazon" 
+
+first ps -ef will result something which will give the output to the grep "amazon".
+
+./testing.sh | grep 1
+1
+10
+11
+12
+
+date is the default command.
+
+stdin stdout stderr
+
+pipe (|) wouldnot be able to receive the output of the stdin. 
+so here if we type date | echo "this"
+this will print but nothing will be printed of the date command.
+
+Because date is system default command and it sends the output to stdin command and pipe(|) doesnot takes the stdin command.
+
+pipe will receive the information if it is not sending the information to the stdin command and command is ready to provide the output.
+
+If we want the process we can use the ps -ef what if someone says to give the process id of the particular thing.
+
+For that we have to use awk.
+
+awk -> filter out the information from the output.
+
+The difference between awk and grep command is:
+grep -> gives the entire statements or the intent sentences 
+awk -> gives a specific columns from the output. 
+
+ps -ef | grep amazon | awk -F" " '{print $2}'
+518
+14250
+
+ps -ef | grep amazon | awk -F" " '{print $1}'
+root
+ubuntu
+
+
+grep name about 
+My name is Kritim
+
+grep name about | awk -F" " '{print $4}'
+Kritim
+
+
+#!/bin/bash
+#################
+# Author: Kritim
+# Date: 01/12/2022
+#
+# This  script outputs the node health
+#
+# Version : v1
+##################
+#
+
+set -x #debug mode 
+
+set -e 
+set -o
+
+echo "Print the disk space"
+df -h
+
+echo "Print the memory"
+free -g
+
+echo "Print the CPU"
+nproc
+
+ps -ef | grep amazon | awk -F" " '{print $2}'
+~                                              
+
+
+
+set -e -> exits the script when there is an error
+
+But the issue is it willnot error out when there is a pipe. 
+
+so we use set -o to  reduce that error.
+
+If we put set -o it will error out if there is any issue if script it having pipe also.
+
+
+we can also use:
+
+set -exo too but splitting is best one.
+
+
+sutra of devops engineer is going to the logfile and finding out the issue.
+
+
