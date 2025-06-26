@@ -1,0 +1,119 @@
+List some of the commonly used shell commands?
+
+ls
+cp
+mv
+mkdir
+touch
+vim
+grep
+find 
+top 
+df 
+awk -> to filter out the specific line
+
+Write a simple shell script to list all processes?
+
+ps -ef
+All the process id?
+ps -ef | awk -F" " '{print $2}'
+
+
+Write a script to print only errors from a remote log?
+
+Curl -> get the output from the file.
+
+curl remote path | grep ERROR
+
+curl pipe and grep
+
+pipe -> combining both thing.
+
+
+Write a shell script to print numbers divided by 3 & 5 and not 15?
+
+#!/bin/bash
+
+
+#divisible by 3, divisible by 5, 3 * 5 = 15
+#!/bin/bash
+for i in {1..100}; do
+    if (( i % 3 == 0 || i % 5 == 0 )) && (( i % 15 != 0 )); then
+        echo $i
+    fi
+done
+
+
+Write a script to print number of "S" in mississippi?
+
+grep -o 
+-o -> only
+x=mississippi
+
+grep -o "s" <<<"$x" | wc -l 
+
+wc -> word count 
+
+<<<"$x" -> sending the x value to it.
+
+How will you debug the shell script?
+
+set -x
+
+What is crontab in Linux? Can you provide an example of usage?
+
+Crontab -> Linux admin 
+Report -> node health
+
+How to open a read-only file?
+
+vim -r test.txt
+
+What is the difference between soft and hard link?
+
+In linux there are two links: soft link and hard link.
+
+Create a file and save a file (Memory)
+Re-use(copy).
+
+If we do hard link there would be copy of the file.
+
+basically if we are two things whose memory is referencing to same thing then if we delete one file then both gets deleted.
+ like ./python 
+ 
+ python 3 -> python
+ 
+ What is the difference between break and continue statements?
+ 
+ break -> breaking the execution
+ continue ->continuing the execution (SKIP) -> skip this and continue the next.
+
+
+What are some disadvantages of shell Scripting?
+
+say based on your experience.
+
+What are the different types of loops and when to use?
+
+for , while, do while
+
+Is bash dynamic or statically typed and why?
+
+shell scripting is dynamically typed.
+
+
+Explain about a network troubleshooting utility?
+traceroute 
+tracepath
+
+How will you sort list of names in a file?
+
+sort command.
+
+How will you manage logs of a system that generate huge log files everyday?
+
+linux admin
+
+Applications -logs (realtime) 10000000 logs
+
+Logrotate (gzip, zip)
