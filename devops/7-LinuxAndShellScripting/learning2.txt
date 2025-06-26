@@ -165,4 +165,62 @@ set -exo too but splitting is best one.
 
 sutra of devops engineer is going to the logfile and finding out the issue.
 
+logfile - find errors in the log file.
+
+curl -> helps to get, post, put response through request.(can retrieve information from any external system.)
+
+curl https://raw.githubusercontent.com/kritimkafle/dummylog01122.log | grep ERROR
+
+wget -> will download the log file.
+curl -> shares the information.
+
+wget -> download -> grep command on download.
+
+
+find -> to look for the file or folder.
+
+to go into the root user:
+sudo su -
+
+root@ip-private ip:~# 
+
+su -> switch user.
+
+
+sudo find / -name kritim
+/home/ubuntu/hello/test/kritim
+/home/ubuntu/kritim
+/home/ubuntu/testing/kritim
+
+sudo -> to get the root user previliges.
+
+
+If else:
+
+if [expression]
+then
+        dfsjsf
+else
+        dsfjk
+fi
+
+
+fi -> to end the if else.
+
+for loop:
+
+for i in {1.100}; do echo $1; done
+
+trap -> for trapping signals. 
+
+kill -> to kill the process
+
+kill -9 1111 -> signal is passed to linux.
+
+^C is a signal to stop for linux.
+
+trap -> even someone is tapping ^C so traps wont allow it.
+
+trap "echo dont use the ctrl+c" SIGINT^C
+
 
