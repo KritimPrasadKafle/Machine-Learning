@@ -117,3 +117,12 @@ linux admin
 Applications -logs (realtime) 10000000 logs
 
 Logrotate (gzip, zip)
+
+Name commonly used shells on a typical Linux system.
+
+There are mainly two kinds of Linux shells- C-shell and Bourne shell. Their derivatives are as follows:
+
+    C-shell: TENEX C-Shell, Z-Shell
+
+    Bourne shell: Korn Shell, POSIX Shell, Bourne-Again Shell
+
