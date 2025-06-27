@@ -126,3 +126,12 @@ There are mainly two kinds of Linux shells- C-shell and Bourne shell. Their deri
 
     Bourne shell: Korn Shell, POSIX Shell, Bourne-Again Shell
 
+ Tell about the four stages of the Linux Process.
+
+The four stages include: 
+
+    Waiting- The Linux process is waiting for the resource
+    Running- The Linux process is currently running
+    Stopped- The Linux process has been stopped after successful execution
+    Zombie- The Linux process is still active in the process table, but it has stopped. 
+
