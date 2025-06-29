@@ -1,0 +1,67 @@
+Why do someone move to cloud?
+To manage infrastructure.
+1. Management.(managing overhead)
+2. Cost
+
+Why company use cloud?
+-> to maintain cost effectiveness.
+
+Every day at 6pm one guy should give information to manager.
+1. EC2, S3, lambda, IAM -> resource usage.
+
+We have to write a shell script.
+
+Shell script will be integrated with the cron job so that it will run exactly at 6pm.
+
+aws configure -> to configure the aws.
+
+
+
+#!/bin/bash
+
+
+###################
+# Author: Kritim
+# Date: 29-Jun
+#
+#Version : v1
+#
+#This script will report the AWS resource usage
+#
+#####################
+
+#AWS S3
+#AWS EC2
+#AWS Lambda
+#AWS IAM Users
+
+set -x
+#list s3 buckets
+echo "Print list of s3 buckets"
+aws s3 ls
+
+#list EC2 Instances
+echo "print list of ec2 instances"
+aws ec2 describe-instances
+
+#list lambda
+echo "print lambda functions"
+aws lambda list-functions
+
+#list IAM users
+echo "print iam list"
+aws iam list-users
+
+
+
+
+
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
+"i-02fafae6f37e37a86"
+"i-06b4bad53744753e9"
+ 
+ -> to get the certain instance id.
+ 
+jq -> like a json parser
+yq -> like a yaml parser
+
