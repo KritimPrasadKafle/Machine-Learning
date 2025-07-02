@@ -1,0 +1,4 @@
+IP Address:
+
+IP -> Internet Protocol
+IP address is used to generate or to provide a unique address to a particular device that is connected to your network.
