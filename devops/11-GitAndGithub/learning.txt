@@ -49,3 +49,13 @@ Git keep track of version.
 git add -> to keep track of file.
 
 git diff is see what exactly has been changed.
+
+It keeps track of all the things in .git.
+
+git log -> to see the all the commits for the same branch.
+
+If we want to go back to the previous commit then 
+git log -> take the commit id
+git reset --hard commit id
+
+
