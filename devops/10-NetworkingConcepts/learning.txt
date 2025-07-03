@@ -2,3 +2,85 @@ IP Address:
 
 IP -> Internet Protocol
 IP address is used to generate or to provide a unique address to a particular device that is connected to your network.
+
+Example: There is a house and in house there is a wifi or local network that is created through a router and there are two people living in this house and each person has two devices. So there are overall 4 devices. One of it is kid and we dont want him to give an access to Instagram so this can be done using IP address.
+
+IP address -> to generate unique address -> we use IPv4
+
+Why do we need to generate unique address?
+In school if we are having a multiple devices.
+
+IPv4 -> 172.16.3.4
+
+to find ip address -> ifconfig, ipconfig
+
+172.16.3.4
+0-255 * 0-255 * 0-255 * 0-255
+
+bits -> byte -> 8 bits -> 4 bytes 
+
+1 byte -> 8 bit 
+4 bytes -> 32 bit
+
+192.600.3.4 -> not an ip address.
+
+
+SubNets:
+
+In an school there was lot of person connecting to the internet of the school and one of the user opened the malicious website and got hacked. As everyone is in the same network everyone got hacked technically. There can be sensitive information like payroll, finance.
+
+So there comes the concept of subnetworking.
+Splitting down the things based on the secureness and free wifi. like in secureness it will be having finance.
+
+Subnet -> Security, Privacy, Isolation
+
+SubNet Types 
+      |
+1. Private -> Doesnot have internet
+2. Public  -> Have a internet
+ 
+VPC is a private network.
+
+We asked for a 65k IP address and as we have done the subnetting how will we be able to divide it in such a way that finance will some exact number of ip address.
+
+When we create a subnet they will ask for a CIDR range.
+
+CIDR is a way of explaining how many IP addresses are available in a particular subnet.
+
+AWS ---VPS> Subnet ---> CIDR -> 172.16.3.0 | 24 
+24 -> number of ip address needed.
+
+172.16.3.0 -> It is represented in bytes but it has been converted from the octal. It is 32 bits -> 4 bytes.
+
+
+172.16.0.0 -> 172.16.255.255 
+If I need 256 ip address.
+172.16.3.0
+172.16.3.1
+172.16.3.2
+172.16.3.3
+172.16.3.255
+
+
+192.16.5.0 | 26
+
+means they are asking for 2^5 - 26 = 64 ip address. 5 comes from the 192.16.5.0 | 26.
+And this is cidr range.
+
+
+In private Subnets mostly it starts from 
+1. 192
+2. 172
+3. 10
+
+
+
+8.8.8.8 -> public of google.com
+
+
+Ports -> to connect to some ip address 
+
+In vm we are having lot of instances. If we create an application and if we want to access this application from the internet we need two things one is the ip address of the virtual machine and it has the port of 9191 then 
+3.4.5.8:9191.
+
+Using port we can distinguish the application.
