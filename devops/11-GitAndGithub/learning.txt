@@ -1,0 +1,51 @@
+Git and Github
+Git is version control system.
+It solves two problems:
+1. Sharing of code.
+2. Versioning.
+
+Dev1 and Dev2 are working on same application. For ex: Calculator, One is making addition function and other is making division.
+
+Dev1 changed 25 files and dev2 changed 32 files then sharing is kind of impossible.
+
+Versioning:
+He was working on the addition and what he did was a + b and later manager told that to have a + b + c and again another vp said to have a + b + c + d. But users were only using a + b. So to splitting to versioned it out we should use the concept of versioning.
+It's a way to keep track of it.
+
+Version Control:
+1. CVS
+2. SVN
+3. GIT
+
+CVS, SVN -> Centralized
+GIT -> Distributed
+
+Difference of Centralized and Distributed:
+
+In centralized everything happens from the central place. When one guy push the code it goes to the centralized one i.e. SVN and from there another guy should have to pick it up.
+If the central server i.e. SVN is down there would be no any communication between them.
+
+In distributed if dev1 wants to share the code to dev2, he can either go to the distributed version control system and dev2 can pick it or he can create a copy of this distributed version control system and call it distributed version system and he can create multiple copies of it and vice versa for dev2 too. Developers can communicate through own copies.
+
+Fork -> create an original copy of overall system.
+
+
+GIT vs GITHUB:
+
+Git is distributed version control system. It is open source.
+Github cames when usability, issues tracking, commenting, reviewing, project management comes in the picture.
+
+first thing is 
+1. git init -> creates the git repository in the folder. It is the one which tracks each and everything. If got deleted then it cannot track it.
+
+Everything in git is tracked as object.
+
+inside .git it will have so much things.
+1. refs and objects -> Everything in git is tracked as objects.
+2. hooks -> If someone pushed the password API token then it is basically used to prevent it.
+3. config -> configuration to put in the git like username, ssh, password, email.
+
+Git keep track of version.
+git add -> to keep track of file.
+
+git diff is see what exactly has been changed.
