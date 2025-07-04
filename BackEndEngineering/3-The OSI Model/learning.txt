@@ -1,0 +1,19 @@
+The OSI Model:
+OSI is a model that standardized the communication in computer systems it is what the internet runs on it is what your phone uses your land your router everything that communicate with each other in computer system uses this model in one way.
+
+OSI -> open systems interconnection model.
+
+Example:
+
+ComputerB(10.0.0.2)(connected with router)   
+Computer(10.0.3)(Connected with router)                
+                           RouterA(10.0.0.1)      
+PhoneD(10.0.0.5)(connected with router)     
+ComputerF(10.0.0.4)(connected with router)
+
+
+We have a bunch of network connection here we have a beautiful router. we have bunch of machines connected to this router could be Ethernet could be WIFI.
+
+MAC address -> Media Access Control
+
+

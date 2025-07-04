@@ -1,0 +1,9 @@
+Things to learn to become a good backend engineer:
+1. Communication Protocols
+2. Web Servers
+3. Data Engineering
+4. Proxies
+5. Caching
+6. Web Framework Runtime
+7. Message Formats
+8. Security

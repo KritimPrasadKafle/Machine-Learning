@@ -1,0 +1,5 @@
+Advice for Beginner backend engineers:
+1. Take your time
+2. Stay hungry and keep learning
+3. Assume your colleagues know something you don't
+4. Question everything
