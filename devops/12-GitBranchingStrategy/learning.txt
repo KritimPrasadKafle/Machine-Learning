@@ -1,0 +1,21 @@
+Git Branching Strategy
+The primary goal is to ensure that the customer gets releases on time.
+
+For that we need to have a proper branching strategy.
+
+What is branch?
+It is a separation.
+
+Developers should create the branch below the main/master and then if she/he is confident and gets approved from the senior then will get merged to the main/master branch.
+
+master/main is for active development.
+
+Release Branch:
+
+Developers actively work on Master they create new feature branches and once their feature branches are confident they merge them to the master and once you decide all the features fixes and everything is done for the release you create a release branch and from the release Branch you ship the product to the customer.
+
+Hot fix Branches:
+Immediately fixing the production issue.
+Code is shipped from the release branches.
+
+
