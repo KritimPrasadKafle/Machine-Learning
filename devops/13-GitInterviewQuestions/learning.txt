@@ -1,0 +1,144 @@
+To generate ssh :
+ssh-keygen -t rsa
+
+Clone vs fork:
+
+Cloning means any repository that is public on github and you can download their code that process is called cloning.
+
+Git is a distributed version control system.
+
+Fork - copy
+Fork is used to create a copy of a repository whereas clone is used to download specific repository.
+
+git log - to see what is the commit id and what has been pushed.
+git diff - to see the difference between the files.
+git log division - is to see from the branch has been divided.
+
+git cherry-pick - means you are picking the commits. 
+git cherry-pick - applies the changes from a specific commit to your current branch, creating a new commit with those changes.
+
+How it works
+When you cherry-pick a commit, Git:
+
+1. Takes the diff/changes from that specific commit
+2. Applies those changes to your current working branch
+3. Creates a new commit with the same changes (but a different commit hash)
+
+But what is the use of git merge and git rebase if we have git cherry-pick?
+If we are having a lot of commits like sixty thousand commits. It is not practically possible to always go to that new Branch copy each and every commit ID and you know manually do cherry pick for sixty thousand times , there will some merge conflict too.
+
+So for that either use git merge or git rebase.
+
+git log --oneline -> shows every commit in oneline.
+
+
+MAIN -> MERGE EXAMPLE -> merge example
+     -> REBASE EXAMPLE -> percentage
+     
+test commit
+
+
+The difference between merge and rebase is how do you want organize your changes.
+
+If you do merge there willnot be linearity, that means your commit wont come after the another commit. But if you do it git rebase it will come linearly.
+
+
+git rebase and git merge do the same things whereas if you are using rebase you get a linear commit history whereas with merge you don't get that. 
+
+
+Git Merge
+
+What it does: Combines two branches by creating a new merge commit that has two parents.
+git checkout main
+git merge feature-branch
+
+Result: Creates a merge commit that preserves the complete history of both branches.
+When to use:
+
+You want to preserve the complete history and context of feature development
+Working in teams where you want to see when features were integrated
+Following a "merge-based" workflow (like GitHub Flow)
+You want to maintain the original commit timestamps and authors
+
+Git Rebase
+
+What it does: Replays commits from one branch onto another, rewriting commit history to create a linear progression.
+
+git checkout feature-branch
+git rebase main
+
+Result: Moves your feature commits to appear as if they were made on top of the latest main branch.
+When to use:
+
+You want a clean, linear history without merge commits
+Before merging a feature branch to avoid cluttered history
+When working on a private feature branch that hasn't been shared
+You prefer a "rebase-based" workflow for cleaner project history
+
+Git Cherry-pick
+What it does: Applies the changes from specific commits to your current branch, creating new commits.
+
+git cherry-pick abc1234
+
+
+Result: Creates new commits with the same changes but different hashes.
+When to use:
+
+You need specific commits from another branch, not the entire branch
+Applying hotfixes to multiple branches
+Selecting only certain features from a larger feature branch
+Moving commits between branches selectively
+
+Key Differences
+Operation     History               Use Case                     Commits
+Merge         Preserves branching   Combine entire branches      Creates merge commit
+Rebase        Linear/clean          Replay commits elsewhere     Rewrites existing commits
+Cherry-pick   Selective             Copy specific commits        Creates new commits
+
+
+Practical Examples
+Merge scenario:
+
+# Integrate completed feature
+git checkout main
+git merge feature-auth
+# Result: Merge commit showing when feature was integrated
+
+Rebase scenario:
+
+# Clean up feature before merging
+git checkout feature-auth
+git rebase main        # Move feature commits on top of latest main
+git checkout main
+git merge feature-auth # Now creates a fast-forward merge
+
+Cherry-pick scenario:
+
+# Apply only the bug fix commit to production
+git checkout main
+git cherry-pick 5f7d8e9  # Just the bug fix, not other WIP commits
+
+
+Decision Guide
+Use Merge when:
+
+Integrating completed features
+You want to preserve when integration happened
+Working with shared/public branches
+Team prefers seeing feature development context
+
+Use Rebase when:
+
+You want clean, linear history
+Preparing private branches before merging
+You're the only one working on the branch
+Following a rebase-workflow team standard
+
+Use Cherry-pick when:
+
+You need only specific commits, not entire branches
+Applying patches across multiple release branches
+Moving commits that were made on wrong branch
+Selective integration of changes
+
+The choice often depends on your team's workflow preferences and whether you prioritize historical accuracy versus clean, readable history.
