@@ -1,0 +1,55 @@
+AWS Services For DevOps
+
+DevOps is all about configuration and automation.
+
+1. EC2 (Elastic Compute cloud).
+2. VPC (Virtual Private cloud). (Secureness)
+   -> Security
+   -> CIDR
+   -> InBound
+   -> OutBound
+3. EBS (Volume)(Elastic Block Store) : AWS Elastic Block Store (EBS) is Amazon's block-level storage solution used with the EC2 cloud service to store persistent data.
+4. S3 (Storage) Storing the data like photo, videos, excelsheet. S3 is encrypted.
+5. IAM (Identity and access management) : Configuring the access to the user.
+6. Cloud Watch(Monitoring and observability service which monitors every action taken in the AWS)
+7. LAMBDA -> Serverless computer.
+
+LAMBDA vs EC2
+LAMBDA -> can be created and paid on automatically like you don't have to do anything from your end. AWS will automatically even without your request like it will not ask you do you want a Ubuntu. Lambda are serverless computes which are used for short actions.
+
+
+
+AWS Lambda:
+
+- Serverless: You don't manage servers; AWS handles the infrastructure. 
+- Event-driven: Functions are triggered by events, making it suitable for tasks like image processing, API endpoints, or real-time data processing. 
+- Automatic Scaling: Automatically scales up or down based on demand. 
+- Pay-per-use: You pay only for the compute time your code consumes. 
+- Simplified Development: Focuses on writing code for functions, with AWS handling deployment and scaling. 
+
+Amazon EC2:
+
+- Virtual Servers: Provides virtual machines (instances) that you can customize. 
+- Full Control: You have control over the operating system, instance type, and software. 
+- Suitable for: Applications requiring specific configurations, long-running processes, or legacy software. 
+- Manual Scaling: Requires manual scaling and infrastructure management. 
+- Flexibility and Control: Offers more flexibility and control over the environment but requires more management. 
+
+8. Cloud Build Services
+	CI/CD -> Jenkins
+        - AWS Code Pipeline
+        - AWS Code Build
+        - AWS Code Deploy
+
+9. AWS Configuration
+10. Billing and Costing
+11. AWS KMS(Key management service)
+12. Cloud Trail 
+13. AWS EKS
+14. Fargate, ECS
+15. ELK(Elastic Search) (Logging)
+
+
+
+
+
