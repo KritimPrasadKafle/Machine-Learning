@@ -1,0 +1,65 @@
+Configuration Management:
+Configuration Management is a way how the devOps engineer configures the servers or configuration of the infrastructure.
+
+System Admin -> On Premises 
+
+On Premises has a 100 of servers where 50 is linux, 25 -> data centers , 25 -> ubuntu.
+
+We have to do these things when we are developing something.
+
+1. Upgrades
+2. Secure patches
+3. Installation
+
+Cloud -> 10x -> 10000 -> Microservices -> 10x -> Number of servers
+
+Problem is when devops has to do Upgrades, secure patches, installation he/she cannot go into every servers and configure it. 
+
+Instead they wrote the script.
+
+Windows -> psh
+Linux -> Shell -> distribution -> Alpine, cen usu
+
+The shell script which has been written might work or might not work this was the problem.
+
+There was tool that invented.
+
+Configuration management is way to manage multiple servers.
+
+So there are lot of tools:
+1. Puppet
+2. Chef
+3. Ansible
+4. Salt
+
+Ansible is mostly used. 
+
+
+Puppet vs Ansible
+Why Ansible?
+Puppet is pull mechanism. Ansible is push mechanism.
+In Ansible if he have to make a 10 ec2 instance then we will write it in this laptop and will push it to the AWS.
+Ansible is also a agentless.
+Puppet follows master/slave concept.
+In puppet, person will be master and then 10 ec2 instance will be slave.
+In puppet we should have to configure the master/slave or agent though in agent we don't need to configure it.
+We should have to put everything in the inventory and we have dynamic inventory will be able to do each and everything when there is load in server.
+To write in puppet it has its own language i.e. puppet. But in Ansible it uses yaml.
+
+
+
+Ansible is good with linux and windows though it is little bit hard when it comes to windows and debugging is also hard in Ansible and performance is slow when there are more than ten thousand servers.
+
+Using Ansible Galaxy we can share the modules. 
+
+
+Interview Questions:
+Ansible uses python.
+Ansible supports both Linux(SSH) and Windows(Win RH).
+For Ansible it  doesnot matter any cloud provider, it works in any cloud provider. (AWS/Azure/GCP).
+
+
+
+
+
+
