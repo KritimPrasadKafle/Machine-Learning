@@ -1,0 +1,11 @@
+Ansible:
+
+Inside the ec2 instance to download the ansible:
+sudo apt install ansible
+
+To verify:
+ansible --version
+
+To work with ansible we need to have two servers.
+
+Ansible should be able to communicate without any password.

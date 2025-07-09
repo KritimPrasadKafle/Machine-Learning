@@ -16,4 +16,38 @@ We have a bunch of network connection here we have a beautiful router. we have b
 
 MAC address -> Media Access Control
 
+10.0.0.3 is a web server having an web app and 10.0.0.5 want to consume it.
 
+GET / 10.0.0.3 80 (Http headers cookies, content-type etc.)   Layer 7 Application
+Encrypt if necessary                                          Layer 6 Presentation
+Establish session tag it                                      Layer 5 Session
+123 | Add ports/seq 80   123 | Break into segment | 80        Layer 4 Transport
+10.0.0.5   |   10.0.0.3    10.0.0.5 | 10.0.0.3                Layer 3 Network
+(Packets are sended here)
+D  |    C     D |     C      D    |    C                      Layer 2 Data Link
+(Here things gets assembled) D - us  C - target machine 
+0110001110101010101001010100101010100100111                   Layer 1 Physical
+
+
+
+It sends this 0110001110101010101001010100101010100100111 to every single machine.
+But the one who is not trying to receive will drop these frames and will ignore it.
+It is done in the network layer. 10.0.0.3.80 is trying to receive it because it access 80 port.
+
+ComputerB(10.0.0.2)(connected with router)   
+Computer(10.0.3)(Connected with router)                
+                           RouterA(10.0.0.1)      
+PhoneD(10.0.0.5)(connected with router)     
+ComputerF(10.0.0.4)(connected with router)
+
+
+So people say don't connect to the public network.
+
+OSI :
+7. Application Layer : Human-computer interaction layer, where applications can access the network services
+6. Presentation Layer : Ensures that data is in a usable format and is where data encryption occurs
+5. Session Layer : Maintains connections and is responsible for controlling ports and sessions
+4. Transport Layer : Transmits data using transmission protocols including TCP and UDP
+3. Network Layer : Decides which physical path the data will take
+2. Data Link Layer : Defines the format of data on the network
+1. Physical Layer : Transmits raw bit stream over the physical medium.
