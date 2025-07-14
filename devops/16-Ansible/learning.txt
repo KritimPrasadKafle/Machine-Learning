@@ -9,3 +9,7 @@ ansible --version
 To work with ansible we need to have two servers.
 
 Ansible should be able to communicate without any password.
+
+Ansible doesnt require password to authenticate.
+
+You need to connect it in both the instance in the terminal.
