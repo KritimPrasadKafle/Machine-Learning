@@ -46,6 +46,6 @@ if __name__ == "__main__":
     message = ["car", "bike", "cycle"]
 
     for msg in message:
-        print("factory.py:49", f.localize(msg))
-        print("factory.py:50", e.localize(msg))
-        print("factory.py:51", s.localize(msg))
+        print("", f.localize(msg))
+        print("", e.localize(msg))
+        print("", s.localize(msg))
