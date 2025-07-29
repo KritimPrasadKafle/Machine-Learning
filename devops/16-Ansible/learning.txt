@@ -13,3 +13,61 @@ Ansible should be able to communicate without any password.
 Ansible doesnt require password to authenticate.
 
 You need to connect it in both the instance in the terminal.
+
+ssh-copy-id private address is one of the way to make passwordless authentication.
+
+ssh-keygen -> creates public and private key.
+
+private key is used to login into the system.
+
+Have two ec2 instance and generate the public and private keys : ssh-keygen
+
+Do it in the one server first. In another two generate it.
+
+and open the authorized_keys. and the one which has been generated in the first one i.e. id_ed25519.pub should be copied and should be paste in the another ec2 instance of authorized_keys.
+
+You can do the ssh in the first one instance by ssh public address.
+
+Commands of ansible is called as ansible adhoc commands.
+
+ansible -i inventory all -m "shell" -a "touch devopsclass" -> this is to create something in the target server.
+
+ansible adhoc commands is for one or two task and ansible playbook is for multiple commands.
+
+df -> disk usage.
+
+ansible -i inventory webservers m "shell" -a "df"
+
+How to write playbook?
+
+okay we have to install nginx, restart nginx.
+
+We made a file called as vim first-playbook.yml
+
+
+ubuntu@ip-172-31-2-72:~$ cat first_playbook.yml 
+---
+- name: Install and Start nginx
+  hosts: all
+  become: root
+
+  tasks: 
+   - name: Install nginx
+     apt:
+  	name: nginx
+     	state: present
+   - name: Start nginx
+     service: 
+  	name: nginx
+     	state: started	
+
+
+This is the playbook in ansible.
+
+It is providing list of things which needs to be executed.
+
+vvv - verbosity(debug mode)
+
+
+
+
