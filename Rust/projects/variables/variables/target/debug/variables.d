@@ -1,0 +1,1 @@
+/home/kritim/Documents/machinelearning/Machine-Learning/Rust/projects/variables/variables/target/debug/variables: /home/kritim/Documents/machinelearning/Machine-Learning/Rust/projects/variables/variables/src/main.rs

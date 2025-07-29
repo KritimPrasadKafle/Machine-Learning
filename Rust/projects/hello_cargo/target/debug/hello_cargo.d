@@ -1,0 +1,1 @@
+/home/kritim/Documents/machinelearning/Machine-Learning/Rust/projects/hello_cargo/target/debug/hello_cargo: /home/kritim/Documents/machinelearning/Machine-Learning/Rust/projects/hello_cargo/src/main.rs
